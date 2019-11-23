@@ -4,7 +4,7 @@
     <title>Klinik Liliput Official</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
@@ -48,8 +48,9 @@
   
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     
-    
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="row col-md-12">
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="background-image navbar" style="background-image: url('img/navbar.jpg'); background-size: contain; background-repeat: no-repeat; width: 1330px;" style="background-color: transparent;">
       <div class="container">
         <img src="{{ asset('images/logo liliput.png') }}" alt="logo" class="img-fluid col-md-2 pr-0">
         <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,15 +77,17 @@
          </ul>
         </div>
       </div>
+      </div>
     </nav>
+    </div>
 
     <section id="home-section" class="hero">
         <div class="home-slider js-fullheight owl-carousel">
             <div class="slider-item js-fullheight">
                 <div class="overlay"></div>
                 <div class="container-fluid p-0">
-                <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                    <img src="{{ asset('img/4.jpg') }}" class="img-fluid vh-100" alt="">
+                <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                    <img src="{{ asset('img/4.jpg') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -92,8 +95,8 @@
         <div class="slider-item js-fullheight">
           <div class="overlay"></div>
           <div class="container-fluid p-0">
-            <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                <img src="{{ asset('img/banner1.jpg') }}" class="img-fluid vh-100" alt="">
+            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <img src="{{ asset('img/banner1.jpg') }}" class="img-fluid" alt="">
             </div>
           </div>
         </div>
@@ -101,15 +104,15 @@
         <div class="slider-item js-fullheight">
           <div class="overlay"></div>
           <div class="container-fluid p-0">
-            <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                <img src="{{ asset('img/banners.jpg') }}" class="img-fluid vh-100" alt="">
+            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <img src="{{ asset('img/banners.jpg') }}" class="img-fluid" alt="">
             </div>
           </div>
         </div>
     </section>
     
-  <section class="ftco-section ftco-services ftco-no-pt ftco-no-pb my-5" style="background-image: url('img/head.jpg');">
-      <div class="container pb-5">
+  <section class="ftco-section ftco-services ftco-no-pt ftco-no-pb mt-5" style="background-image: url('img/head.jpg');">
+      <div class="container pb-1">
         <div class="col-md-12 text-center py-3">
             <h1>
                 VISI MISI
@@ -127,8 +130,8 @@
                 <div class="icon"><img src="{{asset('img/icon/ide.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Satu</h3>
-                  <p style="color: #ff8ba7;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
-                  <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
+                  <p style="color: #ffffff;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
+                  <!-- <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p> -->
                 </div>
               </div>      
             </div>
@@ -138,7 +141,7 @@
                 <div class="icon"><img src="{{asset('img/icon/fisio2.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Dua</h3>
-                  <p style="color: #ff8ba7;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
+                  <p style="color: #ffffff;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
                   <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
                 </div>
               </div>    
@@ -149,7 +152,7 @@
                   <!--<div class="icon"><span class="flaticon-numbre-3"></span></div>-->
                   <div class="icon"><img src="{{asset('img/icon/edukasi.png')}}" style="height: 100px; width: 100px"></div>
                   <h3 class="heading mb-3">Tiga</h3>
-                  <p style="color: #ff8ba7;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
+                  <p style="color: #ffffff;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
                 </div>
               </div>      
             </div>
@@ -158,14 +161,13 @@
       </div>
   </section>
 
-  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb vh-100" id="profil-section" style="background-image: url('img/profile.jpg');">
+  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="profil-section" style="background-image: url('img/profile.jpg'); height: 100%">
       <div class="container py-5">
         <div class="row d-flex">
           <br>
           <br>
-          <div class="col-md-6 col-lg-4 pl-lg-5 mt-5 d-flex">
-            <div class="img d-flex align-self-stretch align-items-center" style="background-image:url('images/about.jpg');height: 350px">
-            </div>
+          <div class="col-md-6 col-lg-4 col-xs-12 pl-lg-5 mt-0 d-flex">
+            <img src="{{ asset('images/about.jpg') }}" class="img-fluid">
           </div>
           <div class="col-md-6 col-lg-7 pl-lg-5 py-0">
             <br>
@@ -211,7 +213,7 @@
 
               <a class="nav-link px-4 flaticon-aroma" id="v-pills-8-tab" data-toggle="pill" href="#v-pills-8" role="tab" aria-controls="v-pills-8" aria-selected="false"> Baby Massage</a>
 
-              <a class="nav-link px-4 flaticon-aroma" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-8" aria-selected="false"> Play Therapy</a>
+              <a class="nav-link px-4 flaticon-cupping" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-8" aria-selected="false"> Play Therapy</a>
             </div>
           </div>
           <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center" style="height:585px !important">
@@ -223,7 +225,7 @@
                 <h2 class="mb-4">Okupasi Terapi/Sensori Integrasi</h2>
                 <p>Memberikan pelayanan terapi bagi anak dengan gangguan proses sensorik (Sensory Integration, gangguan meregulasi diri dan fokus, masalah pada ketrampilan motorik halus dan ketrampilan dalam kegiatan hidup sehari-hari (Childhood Occupation)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
@@ -231,7 +233,7 @@
                 <h2 class="mb-4">Fisio Terapi</h2>
                 <p>Memberikan pelayanan terapi bagi anak dengan gangguan perkembangan motorik (belum mampu duduk, berjalan, pijat bayi, dsb)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
@@ -239,7 +241,7 @@
                 <h2 class="mb-4">Terapi Wicara</h2>
                 <p>Pelayanan terapi bagi anak dengan gangguan kemampuan berinteraksi dan berkomunikasi serta masalah pada motorik daerah mulut seperti mengunyah dan menelan (Feeding Problem)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
@@ -247,7 +249,7 @@
                 <h2 class="mb-4">Snoezelen Terapi</h2>
                 <p>Pelayanan terapi bagi anak dengan gangguan konsentrasi dan regulasi diri, kesulitan perubahan adaptasi, dan lain – lain dengan memberikan stimulus sensorik untuk meningkatkan kemampuan menenangkan diri dan fokus melalui media stimulasi visual, penciuman, pendengaran, perabaan, dsb </p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
@@ -255,7 +257,7 @@
                 <h2 class="mb-4">Akuatik Terapi</h2>
                 <p>Memberikan pelayanan terapi untuk anak dengan gangguan proses sensori (Sensory Integration) serta anak dengan gangguan perkembangan motorik dengan memberikan stimulus sensorik, motorik, dan kesadaran akan tubuh terhadap lingkungan dan bahaya melalui media air</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6-tab">
@@ -263,15 +265,15 @@
                 <h2 class="mb-4">Psikologi</h2>
                 <p>Memberikan pelayanan untuk diagnosis, konsultasi bagi proses tumbuh kembang anak dan permasalahan yang dihadapi keluarganya</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-7-tab">
                 <span class="icon mb-3 d-block flaticon-spiral"></span>
                 <h2 class="mb-4">Terapi Edukasi (Orthopedagogik)</h2>
                 <p>Memberikan pelayanan terapi bagi anak yang mempunyai problem perilaku belajar dan problem akademik. Termasuk didalam program edukasi tersedia program "Learning Support" untuk anak-anak yang kesulitan dalam menerima poembelajaran secara klasikal</p>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
                 <br>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-8-tab">
@@ -279,15 +281,15 @@
                 <h2 class="mb-4">Baby Massage</h2>
                 <p>Pelayanan terapi dengan memberikan stimulasi lewat pijatan untuk membantu meningkatkan proses tumbuh kembang pada bayi</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-9" role="tabpanel" aria-labelledby="v-pills-9-tab">
-                <span class="icon mb-3 d-block flaticon-aroma"></span>
+                <span class="icon mb-3 d-block flaticon-cupping"></span>
                 <h2 class="mb-4">Play Therapy</h2>
                 <p>Pelayanan terapi dengan memberikan stimulasi lewat pijatan untuk membantu meningkatkan proses tumbuh kembang pada bayi</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">Download Kuesioner</a></p>
+                <p><a href="#" class="btn btn-primary">Donwload Kuesioner</a></p>
               </div>
             </div>
           </div>
@@ -295,7 +297,7 @@
       </div>
   </section>
 
-  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb vh-100" id="blog-section" style="background-image: url('img/header.jpg');">
+  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="blog-section" style="background-image: url('img/header.jpg'); height: 100%">
     <div id="move" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" id="move">
         <div class="carousel-item active">
@@ -382,7 +384,7 @@
     </div>
   </section>
 
-  <section class="ftco-section contact-section ftco-no-pt vh-10" id="contact-section" style="background-image: url('img/head.jpg'); height: 600px;">
+  <section class="ftco-section contact-section ftco-no-pt" id="contact-section" style="background-image: url('img/head.jpg'); height: 100%; background-size: cover; background-repeat: no-repeat;">
       <div class="container">
         <br>
         <br>
@@ -445,7 +447,7 @@
       </div>
   </section>
 
-  <section id="go" class="carousel slide gallery ftco-section ftco-no-pt ftco-no-pb vh-100" data-ride="carousel" style="background-image: url('img/head.jpg'); height: 1500px">
+  <section id="go" class="carousel slide gallery ftco-section ftco-no-pt ftco-no-pb" data-ride="carousel" style="background-image: url('img/head.jpg'); height: 100%; background-size: cover; background-repeat: no-repeat;">
       <div class="container py-1">
           <div class="space-50"></div>
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -676,8 +678,8 @@
                     </div>
                 </div>
             </div>
-
     </section>
+
 
 <footer class="ftco-footer ftco-section" id="tentangg">
       <div class="container">

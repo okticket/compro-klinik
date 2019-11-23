@@ -3,10 +3,12 @@
 <head>
   <title>Kuesioner Umum</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+  <link rel="stylesheet" href="{{url('css/style.css')}}">
+  <link rel="stylesheet" href="{{url('css/pict.css')}}">
+  <link rel="stylesheet" href="{{url('js/jquery-ui.css')}}">
+  <script type="text/javascript" src="{{url('js/pict.js')}}"></script>
   <script type="text/javascript" src="{{url('js/jquery.js')}}"></script>
   <script type="text/javascript" src="{{url('js/jquery-ui.js')}}"></script>
-  <link rel="stylesheet" type="text/css" href="{{url('js/jquery-ui.css')}}">
   
   <script type="text/javascript">
     $(function() {
@@ -95,7 +97,7 @@
               </div>
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-11">
-                  <label class="control-label col-md-4 text-left">Tgl Lahir</label>
+                  <label class="control-label col-md-4 text-left">Tanggal Lahir</label>
                   <input type="date" name="tglA" id="datepicker" class="input-tanggal">
                 </div>
               </div>
@@ -138,25 +140,24 @@
                 </div>
               </div> 
               <div class="row">
-                <div class="form-group d-md-inline-flex col-md-11">
-                  <div class="form-group col-md-4 text-left">
-                    <label class="control-label">Foto</label>
+                <div class="form-group d-md-inline-flex col-md-12">
+                  <div class="col-sm-3 col-md-3">
+                    <label class="control-label" style="text-align: left;">Foto</label>
                     <br>
-                    <label class="control-label" style="font-size: 9pt">*Foto berformat (png,jpg,jpeg) max 1MB</label>
+                    <label class="control-label" style="text-align: left; font-size: 10px;">*Foto berformat (png,jpg,jpeg) max 1MB</label>
                   </div>
-                  <div class="col-sm-7" style="padding-left: 17pt">
-                    <div class="input-group">
+                  <div class="col-sm-8 col-md-8 pl-4">
                       <span class="input-group-btn">
-                        <span class="btn btn-default btn-file">
-                          Browse… <input type="file" id="imgInp" name="foto">
+                        <span class="btn btn-default btn-file btn-success" style="margin-left: 10px">
+                          Browse… <input type="file" id="imgInp" value="" name="foto">
                         </span>
+                          <input type="text" class="pl-4" value="{{Request::is('umum') ? $datta->foto:''}}" name="Nfoto">
+                          <br>
+                          <img class="pl-3" id='img-upload' src="{{asset('foto')}}/{{Request::is('umum') ? $datta->foto:''}}" />
                       </span>
-                      <input type="text" class="form-control" name="Nfoto" hidden>
-                    </div>
-                    <img id='img-upload' />
                   </div>
                 </div>
-              </div> 
+              </div>
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-11">
                   <label class="control-label col-md-4 text-left">No. Telepon/HP</label>

@@ -1,8 +1,129 @@
-@extends('paralax')  
-@section('isi')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Klinik Liliput Official</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+
+
+    <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('fonts/Newfolder/font/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/icomoon.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+    <script src="{{ asset('js/modernizr-2.8.3.min.js')}}"></script>
+    <script src="{{ asset('js/magnific-popup.min.js')}}"></script>
+
+    <link src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.input-tanggal').datepicker();   
+      });
+    </script>
+  
+  </head>
+  
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    
+    <div class="row col-md-12">
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="background-image navbar" style="background-image: url('img/navbar.jpg'); background-size: contain; background-repeat: no-repeat; width: 1330px;" style="background-color: transparent;">
+      <div class="container">
+        <img src="{{ asset('images/logo liliput.png') }}" alt="logo" class="img-fluid col-md-2 pr-0">
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+        </button>
+
+          @if(\Session::has('alert-success'))
+            <div class="alert alert-success">
+              <strong> Success </strong> {{Session::get('alert-success')}}
+            </div>
+          @endif
+        
+        <div class="collapse navbar-collapse" id="ftco-nav">
+         <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link" style="color: #ff8ba7;"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#profil-section" class="nav-link" style="color: #ff8ba7;"><span>Profil</span></a></li>
+          <li class="nav-item"><a href="#programs-section" class="nav-link" style="color: #ff8ba7;"><span>Terapi</span></a></li>
+          <li class="nav-item"><a href="#blog-section" class="nav-link" style="color: #ff8ba7;"><span>Artikel</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link" style="color: #ff8ba7;"><span>Kontak</span></a></li>
+          <!--<li class="nav-item"><a href="#gallery" class="nav-link" style="color: #00918e;"><span>Galeri</span></a></li>-->
+          <li class="nav-item"><a href="#go" class="nav-link" style="color: #ff8ba7;"><span>Gallery</span></a></li>
+          <li class="nav-item"><a href="#questions_page" class="nav-link" style="color: #ff8ba7;"><span>FAQ</span></a></li>
+          <a class="btn btn-primary px-4 py-3" href="{{ url('/log')}}">Login</a>
+         </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+    </div>
+
+    <section id="home-section" class="hero">
+        <div class="home-slider js-fullheight owl-carousel">
+            <div class="slider-item js-fullheight">
+                <div class="overlay"></div>
+                <div class="container-fluid p-0">
+                <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                    <img src="{{ asset('img/4.jpg') }}" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slider-item js-fullheight">
+          <div class="overlay"></div>
+          <div class="container-fluid p-0">
+            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <img src="{{ asset('img/banner1.jpg') }}" class="img-fluid" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-item js-fullheight">
+          <div class="overlay"></div>
+          <div class="container-fluid p-0">
+            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+                <img src="{{ asset('img/banners.jpg') }}" class="img-fluid" alt="">
+            </div>
+              <div class="carousel-caption">
+                <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.3s">
+                    <h2>Berminat Terapi di Klinik Liliput?</h2>
+                </div>
+                <div class="wow fadeInUp pl-md-2" data-wow-offset="0" data-wow-delay="0.3s">
+                    <form class="align-items-center">
+                        <a class="btn btn-primary px-4 py-3" href="{{ url('/reg')}}">Register</a>
+                    </form>
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
 		
-	<section class="ftco-section ftco-services ftco-no-pt ftco-no-pb my-5" style="background-image: url('img/head.jpg');">
-      <div class="container pb-5">
+	<section class="ftco-section img ftco-services ftco-no-pt ftco-no-pb mt-5" style="background-image: url('img/head.jpg'); height: 100%; background-repeat: no-repeat;">
+      <div class="container pb-1">
         <div class="col-md-12 text-center py-3">
             <h1>
                 VISI MISI
@@ -20,7 +141,7 @@
                 <div class="icon"><img src="{{asset('img/icon/ide.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Satu</h3>
-                  <p style="color: #ff8ba7;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
+                  <p style="color: #ffffff;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
                   <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
                 </div>
               </div>      
@@ -31,7 +152,7 @@
                 <div class="icon"><img src="{{asset('img/icon/fisio2.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
                   <h3 class="heading mb-3">Dua</h3>
-                  <p style="color: #ff8ba7;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
+                  <p style="color: #ffffff;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
                   <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
                 </div>
               </div>    
@@ -42,7 +163,7 @@
                   <!--<div class="icon"><span class="flaticon-numbre-3"></span></div>-->
                   <div class="icon"><img src="{{asset('img/icon/edukasi.png')}}" style="height: 100px; width: 100px"></div>
                   <h3 class="heading mb-3">Tiga</h3>
-                  <p style="color: #ff8ba7;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
+                  <p style="color: #ffffff;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
                 </div>
               </div>      
             </div>
@@ -51,14 +172,13 @@
       </div>
   </section>
 
-	<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb vh-100" id="profil-section" style="background-image: url('img/profile.jpg');">
+	<section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="profil-section" style="background-image: url('img/profile.jpg'); height: 100%">
     	<div class="container py-5">
     		<div class="row d-flex">
           <br>
           <br>
-    			<div class="col-md-6 col-lg-4 pl-lg-5 mt-5 d-flex">
-            <div class="img d-flex align-self-stretch align-items-center" style="background-image:url('images/about.jpg');height: 350px">
-    				</div>
+    			<div class="col-md-6 col-lg-4 col-xs-12 pl-lg-5 mt-0 d-flex">
+            <img src="{{ asset('images/about.jpg') }}" class="img-fluid">
     			</div>
           <div class="col-md-6 col-lg-7 pl-lg-5 py-0">
             <br>
@@ -107,80 +227,99 @@
               <a class="nav-link px-4 flaticon-cupping" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-8" aria-selected="false"> Play Therapy</a>
             </div>
           </div>
-          <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center" style="height:585px !important">
+
+          <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center" style="height:400px !important">
             
             <div class="tab-content pl-md-5" id="v-pills-tabContent">
 
               <div class="tab-pane fade show active py-0" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
-                <span class="icon mb-3 d-block flaticon-adn-1"></span>
-                <h2 class="mb-4">Okupasi Terapi/Sensori Integrasi</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-adn-1"></span>
+                <h2 class="mt-5 mb-4">Okupasi Terapi/Sensori Integrasi</h2>
                 <p>Memberikan pelayanan terapi bagi anak dengan gangguan proses sensorik (Sensory Integration, gangguan meregulasi diri dan fokus, masalah pada ketrampilan motorik halus dan ketrampilan dalam kegiatan hidup sehari-hari (Childhood Occupation)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
-                <span class="icon mb-3 d-block flaticon-adn-3"></span>
-                <h2 class="mb-4">Fisio Terapi</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-adn-3"></span>
+                <h2 class="mt-5 mb-4">Fisio Terapi</h2>
                 <p>Memberikan pelayanan terapi bagi anak dengan gangguan perkembangan motorik (belum mampu duduk, berjalan, pijat bayi, dsb)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
-                <span class="icon mb-3 d-block flaticon-relationship"></span>
-                <h2 class="mb-4">Terapi Wicara</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-relationship"></span>
+                <h2 class="mt-5 mb-4">Terapi Wicara</h2>
                 <p>Pelayanan terapi bagi anak dengan gangguan kemampuan berinteraksi dan berkomunikasi serta masalah pada motorik daerah mulut seperti mengunyah dan menelan (Feeding Problem)</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab">
-                <span class="icon mb-3 d-block flaticon-counseling"></span>
-                <h2 class="mb-4">Snoezelen Terapi</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-counseling"></span>
+                <h2 class="mt-5 mb-4">Snoezelen Terapi</h2>
                 <p>Pelayanan terapi bagi anak dengan gangguan konsentrasi dan regulasi diri, kesulitan perubahan adaptasi, dan lain – lain dengan memberikan stimulus sensorik untuk meningkatkan kemampuan menenangkan diri dan fokus melalui media stimulasi visual, penciuman, pendengaran, perabaan, dsb </p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-5" role="tabpanel" aria-labelledby="v-pills-5-tab">
-                <span class="icon mb-3 d-block flaticon-rehabilitation-1"></span>
-                <h2 class="mb-4">Akuatik Terapi</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-rehabilitation-1"></span>
+                <h2 class="mt-5 mb-4">Akuatik Terapi</h2>
                 <p>Memberikan pelayanan terapi untuk anak dengan gangguan proses sensori (Sensory Integration) serta anak dengan gangguan perkembangan motorik dengan memberikan stimulus sensorik, motorik, dan kesadaran akan tubuh terhadap lingkungan dan bahaya melalui media air</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-6" role="tabpanel" aria-labelledby="v-pills-6-tab">
-                <span class="icon mb-3 d-block flaticon-clinic"></span>
-                <h2 class="mb-4">Psikologi</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-clinic"></span>
+                <h2 class="mt-5 mb-4">Psikologi</h2>
                 <p>Memberikan pelayanan untuk diagnosis, konsultasi bagi proses tumbuh kembang anak dan permasalahan yang dihadapi keluarganya</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-7" role="tabpanel" aria-labelledby="v-pills-7-tab">
-                <span class="icon mb-3 d-block flaticon-spiral"></span>
-                <h2 class="mb-4">Terapi Edukasi (Orthopedagogik)</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-spiral"></span>
+                <h2 class="mt-5 mb-4">Terapi Edukasi (Orthopedagogik)</h2>
                 <p>Memberikan pelayanan terapi bagi anak yang mempunyai problem perilaku belajar dan problem akademik. Termasuk didalam program edukasi tersedia program "Learning Support" untuk anak-anak yang kesulitan dalam menerima poembelajaran secara klasikal</p>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
                 <br>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-8" role="tabpanel" aria-labelledby="v-pills-8-tab">
-                <span class="icon mb-3 d-block flaticon-aroma"></span>
-                <h2 class="mb-4">Baby Massage</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-aroma"></span>
+                <h2 class="mt-5 mb-4">Baby Massage</h2>
                 <p>Pelayanan terapi dengan memberikan stimulasi lewat pijatan untuk membantu meningkatkan proses tumbuh kembang pada bayi</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
 
               <div class="tab-pane fade py-0" id="v-pills-9" role="tabpanel" aria-labelledby="v-pills-9-tab">
-                <span class="icon mb-3 d-block flaticon-cupping"></span>
-                <h2 class="mb-4">Play Therapy</h2>
+                <br>
+                <br>
+                <br>
+                <span class="icon mb-3 mt-5 d-block Flaticon-cupping"></span>
+                <h2 class="mt-5 mb-4">Play Therapy</h2>
                 <p>Pelayanan terapi dengan memberikan stimulasi lewat pijatan untuk membantu meningkatkan proses tumbuh kembang pada bayi</p>
                 <br>
-                <p><a href="#" class="btn btn-primary px-4 py-3">More</a></p>
               </div>
             </div>
           </div>
@@ -188,7 +327,7 @@
       </div>
   </section>
 
-  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb vh-100" id="blog-section" style="background-image: url('img/header.jpg');">
+  <section class="ftco-counter img ftco-section ftco-no-pt ftco-no-pb" id="blog-section" style="background-image: url('img/header.jpg'); height: 100%">
     <div id="move" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner" id="move">
         <div class="carousel-item active">
@@ -275,7 +414,7 @@
     </div>
   </section>
 
-  <section class="ftco-section contact-section ftco-no-pt vh-10" id="contact-section" style="background-image: url('img/head.jpg'); height: 600px;">
+  <section class="ftco-section img contact-section ftco-no-pt" id="contact-section" style="background-image: url('img/head.jpg'); height: 100%; background-size: cover; background-repeat: no-repeat;">
       <div class="container">
         <br>
         <br>
@@ -338,13 +477,15 @@
       </div>
   </section>
 
-  <section id="go" class="carousel slide gallery ftco-section ftco-no-pt ftco-no-pb vh-100" data-ride="carousel" style="background-image: url('img/head.jpg'); height: 1500px">
-      <div class="container py-1">
-          <div class="space-50"></div>
+  <section id="go" class="carousel slide gallery ftco-section img ftco-no-pt" data-ride="carousel" style="background-image: url('img/head.jpg'); height: 100%; background-size: cover; background-repeat: no-repeat;">
+      <div class="container py-0">
+        <br>
+        <br>
           <div class="col-md-12 heading-section text-center ftco-animate">
-              <h2 class="mb-4">Gallery</h2>
+              <h2>Gallery</h2>
           </div>
-          <div class="space-40"></div>
+          <br>
+          <br>
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
@@ -515,20 +656,20 @@
             <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black"></span>
             <span class="sr-only">Next</span>
           </a>
+          <br>
       </div>
       <div class="space-70"></div>
   </section>
 
-  <section id="questions_page" class="questions-area section-padding vh-100" style="background-image: url('img/head.jpg');">
+  <section id="questions_page" class="questions-area section-padding img ftco-no-pt" style="background-image: url('img/head.jpg'); background-repeat: no-repeat; height: 100%">
         <div class="container">
+          <br>
+          <br>
             <div class="row">
-              <div class="col-md-12 text-center py-5">
-                <h2>
-                  Frequently Ask Question
-                </h2>
+              <div class="col-md-12 text-center py-3">
+                <h2>Frequently Ask Question</h2>
               </div>  
             </div>
-            <br>
             <div class="row">
                 <div class="col-md-12 pt-4">
                     <div class="toggole-boxs panel-group" id="accordion" >             
@@ -569,6 +710,103 @@
                     </div>
                 </div>
             </div>
-
+            <br>
+            <br>
+            <br>
     </section>
-@endsection
+
+
+<footer class="ftco-footer ftco-section" id="tentangg">
+      <div class="container">
+        <div class="row mb-1">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Tentang Kami</a></span></h2>
+              <p>Klinik Liliput adalah sebuah tempat terapi bagi anak-anak yang mempunyai kebutuhan khusus seperti Autisme, Asperger’s Syndrom, Down Syndrom, Cerebral Palsy, Keterlambatan Perkembangan Psikomotor, Problem belajar dan kesulitan belajar, dan lain – lain.</p>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Waktu Pelayanan Kami</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li>
+                    <span class="text">Reguler<br>
+                      Hari Senin – Jumat,  jam 08.00–17.00 WIB<br>
+                      Hari Sabtu,  jam 08.00–12.00 WIB
+                    </span>
+                  </li>
+                  <br>
+                  <li>
+                    <span class="text">Melalui Appointment<br>
+                      Hari Sabtu,  jam 12.00–17.00 WIB
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Kontak Kami</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">Jl. Cipete IV No.6, RT.2/RW.4, Cipete Sel., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12410</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">(62-21) 7581 6662</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope"></span><span class="text">liliputklinik@gmail.com</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> 
+
+    <!--<div class="footer-bottom" style="background: linear-gradient(45deg, #1de099, #1dc8cd);">-->
+      <div class="footer-bottom" style="background: linear-gradient(45deg, #ff8ba7, #ffc6c7);">
+      <div class="container" >
+        <div class="row">
+          <div class="col-md-12 text-center pt-3">
+            <p style="color: white;">SimplyDev - Copyright &copy;2019 Allright Reserved. Colorlib.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="{{ asset('js/jquery.min.js') }}"></script>
+  <script src="{{ asset('js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ asset('js/popper.min.js') }}"></script>
+  <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ asset('js/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/magnific-popup.min.js') }}"></script>
+  <script src="{{ asset('js/aos.js') }}"></script>
+  <script src="{{ asset('js/jquery.animateNumber.min.js') }}"></script>
+  <script src="{{ asset('js/scrollax.min.js') }}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{{ asset('js/google-map.js') }}"></script>
+  
+  <script src="{{ asset('js/main.js')}}"></script>
+    
+  <!--Vendor-JS-->
+    <script src="{{ asset('js/jquery-1.12.4.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.js')}}"></script>
+    <!--Plugin-JS-->
+    <script src="{{ asset('js/contact-form.js')}}"></script>
+    <script src="{{ asset('js/ajaxchimp.js')}}"></script>
+    <script src="{{ asset('js/scrollUp.min.js')}}"></script>
+    <script src="{{ asset('js/wow.min.js')}}"></script>
+
+    <script type="text/javascript">
+    $('.carousel').carousel({
+      interval: 2000
+    })
+    </script>
+  </body>
+</html>

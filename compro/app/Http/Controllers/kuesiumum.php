@@ -16,8 +16,14 @@ class kuesiumum extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $id)
     {
+        $data=DB::table('h_pasien')
+        ->join('d_pasien','d_pasien.id_pasien','=','h_pasien.id_pasien')
+        ->where('h_pasien.id_pasien',$id)->first();
+        $count=$data->where('id_pasien',$id)->count();
+        $tampil=$data->select('foto')->get();
+
         //lahir
         $tgl_lahir=$request->input('tgl_lahir');
         $tahun=$tgl_lahir[0];
@@ -33,6 +39,9 @@ class kuesiumum extends Controller
         $umur=$diff;
 
         return view('kuesioner.umum', [
+            'datta'=>$data,
+            'idd'=>$id,
+            'tampil'=>$tampil,
             'umur'=>$umur
         ]);
     }
@@ -66,29 +75,26 @@ class kuesiumum extends Controller
             $alamatrumah = $request->alamatrumah;
             $keluhan = $request->keluhan;
             //foto
-            //if ($files = $request->file('fileUpload')) {
-               //$destinationPath = 'public/image/'; // upload path
-               //$profileImage = date('YmdHis') . "." . $files->getClientOriginalExtension();
-               //$files->move($destinationPath, $profileImage);
-               //$insert['foto'] = "$profileImage";
-            //}
-                  $file = $request->file('foto');
-               
-                  // Mendapatkan Nama File
-                  $nama_file = $id;
-               
-                  // Mendapatkan Extension File
-                  $extension = $file->getClientOriginalExtension();
-              
-                  // Mendapatkan Ukuran File
-                  $ukuran_file = $file->getSize();
-               
-                  // Proses Upload File
-                  $destinationPath = 'image';
-                  $file->move($destinationPath,$nama_file);
-            //return Redirect::to("image")
-            //->withSuccess('Great! Image has been successfully uploaded.');
-            //endfoto
+            if ($request->file('foto')=='') {
+              $Nfoto=$id;
+            }else{
+            $foto=$request->file('foto');
+            $size=$foto->getSize();
+            $tipe=$foto->getClientOriginalExtension();
+            if ($size>=1024000) {
+              return redirect('/pass'.'/'.$id)->with('alert','file foto tidak boleh melebihi dari 1MB');
+            }
+            $Nfoto=$id;
+            $idfoto=$request->$Nfoto;
+              if ($idfoto==$id) {
+
+              }elseif($idfoto!=$id) {
+                  $data=DB::table('d_pasien')->select('foto')->where('id_pasien',$id)->first();
+                  //File::delete('/foto'.$data->foto);
+                  $pict=$request->file('foto');
+                  $pict->move(public_path().'/foto',$Nfoto);
+              }
+            }
             $tlp = $request->tlp;
             $namaayah= $request->namaayah;
             $nikayah= $request->nikayah;
@@ -125,7 +131,7 @@ class kuesiumum extends Controller
             'alamatsekolah'=> $alamatsekolah,
             'alamat'=> $alamatrumah,
             'keluhan'=> $keluhan,
-            'foto'=> $insert,
+            'foto'=> $Nfoto,
             'tlp'=> $tlp,
             'nama_ayah'=> $namaayah,
             'nik_ayah'=> $nikayah,
@@ -153,10 +159,7 @@ class kuesiumum extends Controller
             'alamatpengisi'=> $alamat
         ];
 
-          //DB::table('d_pasien')->insert($datad);
-          //return view('users.isi')->with('alert-success','Login berhasil');
-
-        m_kuesiumum::insert($datad)->with('alert-success','Login berhasil');
+        DB::table('d_pasien')->insert($datad);
         return view('users.isi')->with('alert-success','Login berhasil');
     }
 

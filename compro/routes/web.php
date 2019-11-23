@@ -24,6 +24,10 @@ Route::post('/logg', 'LoginController@loginn');
 Route::get('/reg', 'CompanyProfile@Regist');
 Route::resource('/daftar','daftarpasien');
 
+//reset
+Route::get('/reset', 'CompanyProfile@Reset');
+Route::post('/resett', 'CompanyProfile@resett');
+
 //kuesioner
 Route::get('/pass', 'CompanyProfile@Umum');
 Route::resource('/umum','kuesiumum');
@@ -35,4 +39,7 @@ Route::get('/three', 'Controller@tiga');
 Route::get('/four', 'Controller@empat');
 Route::get('/five', 'Controller@lima');
 Route::get('/six', 'Controller@enam');
+
+//email
+Route::get('/mail', 'Controller@maill');
 ?>

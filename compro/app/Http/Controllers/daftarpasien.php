@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\m_daftarpasien;
 use App\m_daftar;
 use App\m_kuesiumum;
+use Mail;
 use DB;
 
 class daftarpasien extends Controller
@@ -27,20 +28,18 @@ class daftarpasien extends Controller
      */
      protected function create(array $data)
     {
-        $user =  User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        //$user =  User::create([
+            //'name' => $data['name'],
+            //'email' => $data['email'],
+            //'password' => Hash::make($data['password']),
+        //]);
 
-        $verificationUser = ActivationUser::create([
-            'user_id' => $user->id,
-            'token' => str_random(40)
-        ]);
+        //$verificationUser = ActivationUser::create([
+            //'user_id' => $user->id,
+            //'token' => str_random(40)
+        //]);
 
-        Mail::to($user->email)->send(new ActivationEmail($user));
-
-        return $user;
+        //return $user;
     }
 
     /**
@@ -51,23 +50,43 @@ class daftarpasien extends Controller
      */
     public function store(Request $request)
     {
+
         $data=DB::table('h_pasien')
         ->join('d_pasien','d_pasien.id_pasien','=','h_pasien.id_pasien')->get();
 
         $now=date('ymd');
 
+        $id_pasien = $request->input('id_pasien');
+        $email = $request->input('email');
+        $username = $request->input('username');
+        $password = md5($request->input('password'));
+
         $data1=[
-            'id_pasien' => $request->id_pasien,
-            'email' => $request->email,
-            'username' => $request->username,
-            'password' => md5($request->password)
+            'id_pasien' => $id_pasien,
+            'email' => $email,
+            'username' => $username,
+            'password' => $password
         ];
 
+        $ambil=DB::table('h_pasien')->select('email')
+        ->where(['email'=>$email])->first();
+
         $data3=[
-            'id_pasien' => $request->id_pasien,
+            'id_pasien' => $id_pasien,
             'tgl' => $now,
             'status' => 0
         ];
+
+        //Mail::to($ambil)->send(new ActivationEmail($user));
+        Mail::send('users.maill', compact('data'), function($message) use($ambil){
+            set_time_limit(300);
+
+            
+            $message->priority('importance');
+            $message->from('admin@klinikliliput.com', 'Admin');
+            $message->to($ambil)->subject('Email Verification');
+            //$message->attachData($output, 'Your Payroll '.date('d-m-Y').'.pdf');
+        });
 
         m_daftarpasien::insert($data1); //simpan ke tabel h_pasien
         m_daftar::insert($data3); // simpan ke tabel daftar
@@ -117,30 +136,5 @@ class daftarpasien extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function Activation($token)
-    {
-        $verificationUser = ActivationUser::where('token', $token)->first();
-        if(isset($verificationUser) ){
-            $user = $verificationUser->user;
-            if(!$user->verified) {
-                $verificationUser->user->is_verified = 1;
-                $verificationUser->user->save();
-                $status = "Email Kamu Terlah Terverifikasi. Silahkan login sekarang juga.";
-            }else{
-                $status = "Email Kamu Terlah Terverifikasi Sebelumnya. Silahkan login sekarang juga.";
-            }
-        }else{
-            return redirect('/login')->with('warning', "Maaf Email Tidak dapat di identifikasi.");
-        }
- 
-        return redirect('/login')->with('status', $status);
-    }
-
-    protected function registered(Request $request, $user)
-    {
-        $this->guard()->logout();
-        return redirect('/login')->with('status', 'Kami Mengirimkan Code Konfirmasi. Cek Email Kamu dan Ikuti Link Verify Email.');
     }
 }

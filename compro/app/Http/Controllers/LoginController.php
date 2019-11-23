@@ -13,7 +13,7 @@ class LoginController extends Controller
 {
 
     public function loginn(Request $request){
-      $this->validate($request,['username'=>'required'],['password'=>'required']);
+      //$this->validate($request,['username'=>'required'],['password'=>'required']);
  
       $user = $request->input('username');
       $pass = md5($request->input('password'));
