@@ -27,11 +27,11 @@ class LoginController extends Controller
       //->where(['username'=>$user, 'password'=>$pass])->first();
 
       $userlain = DB::table('h_pasien')
-      ->where(['username'=>$user, 'password'=>$pass])->first();
+      ->where(['email'=>$user, 'password'=>$pass])->first();
 
         if(count((array)$userlain)==0){
            return redirect('log')->with('alert','Login gagal');
-        }else if($user == $userlain->username AND $pass == $userlain->password){
+        }else if($user==$userlain->email AND $pass==$userlain->password){
            Session::put('login', 'Selamat anda berhasil login');
            Session::put('id_pasien',$userlain->id_pasien);
            //$cek=count((array)$ambil)==1;

@@ -50,10 +50,6 @@ class daftarpasien extends Controller
      */
     public function store(Request $request)
     {
-
-        $data=DB::table('h_pasien')
-        ->join('d_pasien','d_pasien.id_pasien','=','h_pasien.id_pasien')->get();
-
         $now=date('ymd');
 
         $id_pasien = $request->input('id_pasien');
@@ -61,14 +57,21 @@ class daftarpasien extends Controller
         $username = $request->input('username');
         $password = md5($request->input('password'));
 
+        $ambil=DB::table('h_pasien')->select('email')
+        ->where(['email'=>$email])->first();
+
+        $data=DB::table('h_pasien')->select('email')->first();
+
         $data1=[
             'id_pasien' => $id_pasien,
             'email' => $email,
             'username' => $username,
-            'password' => $password
+            'password' => $password,
+            'konfirmasi' => 'Belum'
         ];
 
-        $ambil=DB::table('h_pasien')->select('email')
+        $data2=DB::table('h_pasien')
+        ->select('email')
         ->where(['email'=>$email])->first();
 
         $data3=[
@@ -77,20 +80,25 @@ class daftarpasien extends Controller
             'status' => 0
         ];
 
-        //Mail::to($ambil)->send(new ActivationEmail($user));
-        Mail::send('users.maill', compact('data'), function($message) use($ambil){
-            set_time_limit(300);
+        $dataa=DB::table('h_pasien')
+        ->join('d_pasien','d_pasien.id_pasien','=','h_pasien.id_pasien')->get();
+        
 
-            
-            $message->priority('importance');
-            $message->from('admin@klinikliliput.com', 'Admin');
-            $message->to($ambil)->subject('Email Verification');
-            //$message->attachData($output, 'Your Payroll '.date('d-m-Y').'.pdf');
-        });
+        if(count((array)$data2)==1){ 
+                return redirect('reg')->with('alert','Registration Failed, Your e-mail already exists');
+        }else{
+                //Mail::to($ambil)->send(new ActivationEmail($user));
+                //Mail::send('users.maill', compact('id_pasien'), function($message) use($data1, $id_pasien){
+                //set_time_limit(300);
+                //$message->priority('importance');
+                //$message->to($data1['email'])->subject('Email Verification');
+                //$message->attachData($output, 'Your Payroll '.date('d-m-Y').'.pdf');
+                //});
 
-        m_daftarpasien::insert($data1); //simpan ke tabel h_pasien
-        m_daftar::insert($data3); // simpan ke tabel daftar
-        return redirect('reg')->with('alert-success','Kamu berhasil Register');
+                m_daftarpasien::insert($data1); //simpan ke tabel h_pasien
+                m_daftar::insert($data3); // simpan ke tabel daftar
+                return redirect('reg')->with('alert-success','Registration Success');
+        }
     }
 
     /**

@@ -12,36 +12,78 @@
   
   <script type="text/javascript">
     $(function() {
-        $( "#datepicker" ).datepicker();
+        $("#datepicker").datepicker();
     });
- 
+  </script>
+
+  <script type="text/javascript">
     window.onload=function(){
         $('#datepicker').on('change', function() {
             var dob = new Date(this.value);
             var today = new Date();
             var age = Math.floor((today-dob) / (365.25 * 24 * 60 * 60 * 1000));
-            $('#umur').val(age + " tahun");
+            $('#umur').val(age);
           });
       }
   </script>
+
+  <script type="text/javascript">
+    window.onload=function(){
+        $('#alamatrumah').on('change', function() {
+            var alamat = document.getElementById("alamatrumah").value;
+            $('#alamatayah').val(alamat);
+            $('#alamatibu').val(alamat);
+          });
+      }
+  </script>
+
+<!--
+<script type="text/javascript">
+    function alamatayah(){
+        var alamati = document.getElementById("alamatayah");
+        var alamatp = document.getElementById("alamatrumah").value;
+
+    if(document.getElementById("cekboxa").checked == true){
+      alamati.readOnly = true;
+      alamati.innerHTML = alamatp;
+      $('#alamatayah').val(alamatp);
+    }else{
+      alamati.readOnly = false;
+      alamati.innerHTML = " ";
+    }
+    }
+</script>
+<script type="text/javascript">
+    function alamatibu(){
+        var alamati = document.getElementById("alamatibu");
+        var alamatp = document.getElementById("alamatrumah").value;
+
+    if(document.getElementById("cekboxb").checked == true){
+      alamati.readOnly = true;
+      alamati.innerHTML = alamatp;
+      $('#alamatibu').val(alamatp);
+    }else{
+      alamati.readOnly = false;
+      alamati.innerHTML = " ";
+    }
+    }
+</script>
+-->
 </head>
 
 <body class="vh-100" style="background: linear-gradient(45deg, #1de099, #1dc8cd);">
 
-  <nav class="navbar bg-white" id="ftco-navbar">
-    <div class="container">
-      <div class="col-md-6 offset-3 d-md-inline-flex px-1 py-1">
-        <img class="col-md-4 offset-4 text-center img-fluid" src="{{ asset('images/logo liliput.png')}}">
-      </div>
-    </div>
+  <nav class="navbar bg-white row" id="ftco-navbar">
+    <img class="row background-image navbar img img-fluid py-5 px-0 text-center" style="background-image: url('img/navbar logo.jpg'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 70%" href="{{'/'}}">
   </nav>
+
   <div class="space-60"></div>
   <div class="container-fluid">  
     <div class="row">
       <div class="col-md-12 px-5 py-4">
         <br>
         <div class="card col-bg-12 bg-white">
-          <form class="form-horizontal" action="{{url('umum')}}" method="post" enctype="multipart/form-data">
+          <form class="form-horizontal" action="{{url('umum')}}" method="post">
             @csrf
             <div class="box-body">
               <div class="row">
@@ -130,7 +172,7 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-11">
                   <label class="control-label col-md-4 text-left">Alamat Rumah</label>
-                  <textarea class="form-control col-md-8" rows="3" required name="alamatrumah"></textarea>
+                  <textarea class="form-control col-md-8" rows="3" required name="alamatrumah" id="alamatrumah"></textarea>
                 </div>
               </div>
               <div class="row">
@@ -151,9 +193,9 @@
                         <span class="btn btn-default btn-file btn-success" style="margin-left: 10px">
                           Browse… <input type="file" id="imgInp" value="" name="foto">
                         </span>
-                          <input type="text" class="pl-4" value="{{Request::is('umum') ? $datta->foto:''}}" name="Nfoto">
+                          <input type="text" class="pl-4" value="{{Request::is('umum') ? $data->foto:''}}" name="Nfoto" id="Nfoto" readonly />{{Request::is('umum') ? $data->foto:''}}
                           <br>
-                          <img class="pl-3" id='img-upload' src="{{asset('foto')}}/{{Request::is('umum') ? $datta->foto:''}}" />
+                          <img class="pl-3" id='img-upload' src="{{asset('foto')}}/{{Request::is('umum') ? $data->foto:''}}" hidden />
                       </span>
                   </div>
                 </div>
@@ -207,7 +249,8 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">Alamat</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="alamatayah">
+                  <textarea class="form-control col-md-7 text-left" id="alamatayah" rows="3" name="alamatayah" value="alamatrumah">
+                  </textarea>
                 </div>
               </div>
               <div class="row">
@@ -219,7 +262,15 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">Pendidikan</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="pendidikanayah">
+                  <!--input type="text" class="form-control col-md-7 text-left" required name="pendidikanayah"-->
+                  <select class="form-control col-md-7 text-left select2" style="width: 100%;" name="pendidikanayah" required>
+                    <option value="Pilih">Pilih</option>
+                    <option value="Laki-laki">SMA</option>
+                    <option value="Perempuan">S1</option>
+                    <option value="Perempuan">S2</option>
+                    <option value="Perempuan">S3</option>
+                    <option value="Perempuan">Other</option>
+                  </select>
                 </div>
               </div>
               <div class="row">
@@ -231,7 +282,7 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">E-mail</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="emailayah">
+                  <input type="email" class="form-control col-md-7 text-left" required="email" name="emailayah">
                 </div>
               </div>
               <hr>
@@ -265,7 +316,8 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">Alamat</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="alamatibu">
+                  <textarea class="form-control col-md-7 text-left" id="alamatibu" rows="3" name="alamatibu" value="alamatrumah">
+                  </textarea>
                 </div>
               </div>
               <div class="row">
@@ -277,7 +329,15 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">Pendidikan</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="pendidikanibu">
+                  <!--input type="text" class="form-control col-md-7 text-left" required name="pendidikanibu"-->
+                  <select class="form-control col-md-7 text-left select2" style="width: 100%;" name="pendidikanibu" required>
+                    <option value="Pilih">Pilih</option>
+                    <option value="Laki-laki">SMA</option>
+                    <option value="Perempuan">S1</option>
+                    <option value="Perempuan">S2</option>
+                    <option value="Perempuan">S3</option>
+                    <option value="Perempuan">Other</option>
+                  </select>
                 </div>
               </div>
               <div class="row">
@@ -289,7 +349,7 @@
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
                   <label class="control-label col-md-4 ml-1 text-left">E-mail</label>
-                  <input type="text" class="form-control col-md-7 text-left" required name="emailibu">
+                  <input type="email" class="form-control col-md-7 text-left" required="email" name="emailibu">
                 </div>
               </div>
               </div>

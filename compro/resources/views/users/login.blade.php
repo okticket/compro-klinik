@@ -13,8 +13,8 @@
               </div>
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
-                  <label class="control-label col-md-5 px-5 text-left">Username</label>
-                  <input type="text" class="form-control col-md-6 text-left" name="username" required>
+                  <label class="control-label col-md-5 px-5 text-left">Email</label>
+                  <input type="email" class="form-control col-md-6 text-left" name="username" required="email|unique:h_pasien">
                 </div>
               </div> 
               <div class="row">

@@ -28,10 +28,6 @@ Route::resource('/daftar','daftarpasien');
 Route::get('/reset', 'CompanyProfile@Reset');
 Route::post('/resett', 'CompanyProfile@resett');
 
-//kuesioner
-Route::get('/pass', 'CompanyProfile@Umum');
-Route::resource('/umum','kuesiumum');
-
 //artikel
 Route::get('/one', 'Controller@satu');
 Route::get('/two', 'Controller@dua');
@@ -40,6 +36,18 @@ Route::get('/four', 'Controller@empat');
 Route::get('/five', 'Controller@lima');
 Route::get('/six', 'Controller@enam');
 
+//new assessment
+Route::post('/assesnew', 'CompanyProfile@assesnew');
+
+//kuesioner
+Route::get('/pass', 'CompanyProfile@Umum');
+Route::resource('/umum','kuesiumum');
+//req download kuesioner
+Route::post('/reqdownload', 'CompanyProfile@reqdownload');
+
 //email
-Route::get('/mail', 'Controller@maill');
+//Route::get('/mail', 'Controller@maill');
+//Route::post('/daftar', 'CompanyProfile@kirim');
+//Route::get('/konfirm/{id}', 'CompanyProfile@konfirmasi');
+//Route::post('/submit', 'CompanyProfile@submit');
 ?>

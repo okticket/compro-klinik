@@ -93,6 +93,7 @@ class kuesiumum extends Controller
                   //File::delete('/foto'.$data->foto);
                   $pict=$request->file('foto');
                   $pict->move(public_path().'/foto',$Nfoto);
+                  return redirect('/pass'.'/'.$id)->with('alert','done');
               }
             }
             $tlp = $request->tlp;
@@ -159,8 +160,32 @@ class kuesiumum extends Controller
             'alamatpengisi'=> $alamat
         ];
 
+        $now = date('ymd');
+        $dataakhir = \App\m_daftarpasien::max('id_pasien');
+        $no = $dataakhir;
+        $noo = $no++;
+        $lama = substr($no, 0, 6);
+        $rplc = str_replace($lama, $now, $noo);
+        $idasses=$rplc;
+
+        $asses=[
+            'id_pasien'=> $id,
+            'id_asses'=> $idasses,
+            'status_pasien'=> 'Daftar'
+        ];
+
+        $recstatus=[       
+            'id_pasien'=> $id,
+            'id_asses'=> $idasses,
+            'keterangan' => 'Daftar',
+            'tgl' => $now
+        ];
+
+        //m_kuesiumum::insert($datad);
         DB::table('d_pasien')->insert($datad);
-        return view('users.isi')->with('alert-success','Login berhasil');
+        DB::table('assessment')->insert($asses);
+        DB::table('record_status_pasien')->insert($recstatus);
+        return view('users.isi')->with('alert-success','Success');
     }
 
     /**

@@ -15,10 +15,10 @@
               <?php
                 $now = date('dmy');
                 $dataakhir = \App\m_daftarpasien::max('id_pasien');
-                $no = $dataakhir+1;
+                $no = $dataakhir;
                 $lama = substr($no, 0, 6);
                 $rplc = str_replace($lama, $now, $no);
-                $id_pasien=$rplc;
+                $id_pasien=$rplc++;
               ?>
               <input type="text" class="form-control col-md-6 text-left" name="id_pasien" value="{{$id_pasien}}" hidden>
 

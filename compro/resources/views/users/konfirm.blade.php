@@ -18,25 +18,30 @@
 
               <div class="row">
                 <div class="form-group col-md-12">
-                  <div class="col-md-12 text-center">
+                  <div class="col-md-12 pt-3 text-center">
                     <img class="img-fluid" src="{{ asset('images/logo liliput.png')}}" style="height: 50px; width: 100px">
                   </div>
-                    <label class="col-md-12 text-center"><h3>Verifikasi email</h3><hr></label>
+                    <label class="col-md-12 text-center pt-3"><h3>E-mail Verification</h3><hr></label>
                 </div>
               </div> 
 
               <div class="row">
-                <div class="form-group" style="padding-left: 100px">
-                  <div class="col-md-12 text-center">
-                    <label class="control-label">Untuk verifikasi email anda, silahkan klik link dibawah ini</label>
-                  </div>
-                  <div class="col-md-12 text-center">
-                    <p><a href="{{url('http://localhost:8000/konfirm/'.$id_pasien)}}">LINK VERIFICATION</a></p>
-                  </div>
-                  <div class="col-md-12 text-center">
-                    <label class="control-label">Best Regards, Admin Klinik liliput</label>
-                  </div>
-                </div>
+                <form action="{{url('/submit')}}" method="post">
+                  @csrf
+                    <div class="form-group" style="padding-left: 100px">
+                      <div class="col-md-12 text-center" style="padding-left: 140px">
+                        <label class="control-label">Silahkan klik tombol dibawah ini</label>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        <input type="hidden" name="id" value="{{$id}}">
+                        <input type="hidden" name="isi" value="Sudah">
+                      </div>
+                      <div class="col-md-12 text-center" style="padding-left: 140px">
+                        <button class="button btn-default" type="submit">Submit</label>
+                      </div>
+                      <br>
+                    </div>
+                </form>
               </div>
 
             </div>

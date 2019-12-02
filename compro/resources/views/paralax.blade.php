@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
 </head>
 
-<body class="img-fluid background-image bgi container-fluid" style=" height: ">
+<body class="img img-fluid background-image bgi container-fluid" style=" height: 100%; width: 100%;">
 
 <style type="text/css">
     .bgi{
@@ -17,27 +17,17 @@
       background-color: #8dc53c;
     }
 </style>
-    <!--div class="row col-md-12">
-    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="background-image navbar" style="background-image: url('img/navbar.jpg'); background-size: contain; background-repeat: no-repeat; width: 1330px;" style="background-color: transparent;">
-      <div class="container"-->
-
-  <nav class="navbar bg-white row" id="ftco-navbar">
-    <div class="background-image navbar" style="background-image: url('img/navbar tengah.png'); background-size: contain; background-repeat: no-repeat; width: 1330px;" style="background-color: transparent;">
-    <div class="container">
-      <div class="col-md-6 offset-3 d-md-inline-flex px-1">
-        <a href="{{url('/')}}"><img class="col-md-4 offset-4 text-center img-fluid" src="{{ asset('images/logo liliput.png')}}"></a>
-      </div>
-    </div>
-    </div>
-  </nav>
+    
+    <nav class="navbar bg-white row" id="ftco-navbar">
+    <img class="row background-image navbar img img-fluid py-5 px-0 text-center" style="background-image: url('img/navbar logo.jpg'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 70%" href="{{'/'}}">
+    </nav>
 
   <div class="container-fluid">  
     <div class="row">
-      <div class="col-md-6 offset-3 py-1">
+      <div class="col-md-6 col-xs-6 offset-3 py-1">
         <br>
         <br>
-        <div class="card col-md-12 bg-white">
+        <div class="card col-md-12 col-xs-12 bg-white">
           @if (\Session::has('alert'))
           <div class="alert alert-danger text-center">
             <strong> Warning! </strong> {{Session::get('alert')}}
