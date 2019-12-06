@@ -13,14 +13,21 @@
               </div>
 
               <?php
+                $angka=range(0,9);
+                shuffle($angka);
+                $id=array_rand($angka,2);
+                $idstring=implode($id);
+                $id_asses=$idstring;
+
                 $now = date('dmy');
                 $dataakhir = \App\m_daftarpasien::max('id_pasien');
                 $no = $dataakhir;
                 $lama = substr($no, 0, 6);
                 $rplc = str_replace($lama, $now, $no);
-                $id_pasien=$rplc++;
+                $id_pasien=$rplc.$id_asses;
               ?>
               <input type="text" class="form-control col-md-6 text-left" name="id_pasien" value="{{$id_pasien}}" hidden>
+
 
               <div class="row">
                 <div class="form-group d-md-inline-flex col-md-12">
@@ -42,7 +49,7 @@
               </div>            
               <br>
               <button class="btn btn-success col-md-10 offset-1" href="#">Sign Up</button>
-              <p class="text-center col-md-6 offset-3"><a href="{{url('/log')}}" class="text-center col-md-12"> Already registered? <strong>Sign In</strong></a></p>
+              <p class="text-center col-md-6 offset-3"><a href="{{url('/log')}}" class="text-center col-md-12" style="color: black"> Already registered? <strong>Sign In</strong></a></p>
             </div>
           </form>
           

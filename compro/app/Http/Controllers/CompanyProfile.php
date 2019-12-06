@@ -99,41 +99,37 @@ class CompanyProfile extends Controller
             'nama' => $namad,
             'email' => $emaild,
             'keterangan' => 'Asses',
-            'Status' => 'Request'
+            'status' => 'Request'
         ];
 
         $apa=DB::table('request_dash');
         $apa->insert($data);
-        return redirect('isi')->with('alert-successs','Success Request New Asses');
+        return redirect('isi')->with('alert-success','Success Request New Asses');
     }
 
     public function reqdownload(Request $request){
         $now=date('ymd');
 
-        $idd = $request->input('idd');
-        //$nam = $request->input('nam');
-        $a = $request->input('nam');
-        $b = $request->input('nbm');
-        $c = $request->input('ncm');
-        $nam = $a+$b+$c;
+        $idd = $request->input('ids');
+        $nam = $request->input('id_image');
 
-        $ambil=m_daftarpasien::where('id_pasien', $idd)->first();
-        $namad = $ambil->username;
-        $emaild = $ambil->email;
+        $ambil=DB::table('h_pasien')->where('id_pasien', $idd)->first();
+        $nama = $ambil->username;
+        $email = $ambil->email;
 
         $dataa=[
             'tgl' => $now,
             'id_pasien' => $idd,
-            'nama' => $namad,
-            'email' => $emaild,
+            'nama' => $nama,
+            'email' => $email,
             'keterangan' => 'Kuesioner',
-            'jenis_terapi' => $a+$b+$c,
-            'Status' => 'Request'
+            'jenis_terapi' => $nam,
+            'status' => 'Request'
         ];
 
         $new=DB::table('request_dash');
         $new->insert($dataa);
-        return view('users.isi')->with('alert-success','Success Request Kuesioner');
+        return redirect('isi')->with('alert-success','Success Send Request Kuesioner');
     }
 
     public function kirim(Request $request){

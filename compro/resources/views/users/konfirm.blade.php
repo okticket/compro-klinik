@@ -21,25 +21,22 @@
                   <div class="col-md-12 pt-3 text-center">
                     <img class="img-fluid" src="{{ asset('images/logo liliput.png')}}" style="height: 50px; width: 100px">
                   </div>
-                    <label class="col-md-12 text-center pt-3"><h3>E-mail Verification</h3><hr></label>
+                    <label class="col-md-12 text-center pt-3"><h3>Kuesioner</h3><hr></label>
                 </div>
               </div> 
 
               <div class="row">
-                <form action="{{url('/submit')}}" method="post">
+                <form class="form-horizontal">
                   @csrf
                     <div class="form-group" style="padding-left: 100px">
                       <div class="col-md-12 text-center" style="padding-left: 140px">
-                        <label class="control-label">Silahkan klik tombol dibawah ini</label>
+                        <label class="control-label">Dear, Orang tua calon pasien</label><br>
+                        <label class="control-label">Berikut adalah file kuesioner yang telah Anda pilih sebelumnya, silahkan di unduh, kemudian di isi.</label>
+                        <label class="control-label">Selanjutnya, mohon kuesioner yang telah Anda isi, dibawa ke klinik, ketika Anda mendapat konfirmasi telefon untuk melakukan assessment terapi.</label>
+                        <label class="control-label">Terimakasih.</label><br>
+                        <label class="control-label">Best Regards,</label><br>
+                        <label class="control-label">Admin Klinik Liliput</label><br>
                       </div>
-                      <div class="col-md-12 text-center">
-                        <input type="hidden" name="id" value="{{$id}}">
-                        <input type="hidden" name="isi" value="Sudah">
-                      </div>
-                      <div class="col-md-12 text-center" style="padding-left: 140px">
-                        <button class="button btn-default" type="submit">Submit</label>
-                      </div>
-                      <br>
                     </div>
                 </form>
               </div>

@@ -48,10 +48,16 @@
   </head>
   
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    <!--<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Slim</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>-->
     
-    <div class="row col-md-12">
       <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="background-image navbar" style="background-image: url('img/navbar.jpg'); background-size: cover; background-repeat: no-repeat; width: 1330px; height: 100%" style="background-color: transparent;">
+        <div class="background-image navbar" style="background-image: url('img/navbar.jpg'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 50%" style="background-color: transparent;">
         <div class="container">
           <!--img src="{{ asset('images/logo liliput.png') }}" alt="logo" class="img-fluid col-md-2 col-xs-2 pr-0" style="height: 70px; width: 100px;"-->
           <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,71 +72,31 @@
           
           <div class="collapse navbar-collapse" id="ftco-nav">
            <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item"><a href="#home-section" class="nav-link" style="color: #ff8ba7;"><span>Home</span></a></li>
-            <li class="nav-item"><a href="#profil-section" class="nav-link" style="color: #ff8ba7;"><span>Profil</span></a></li>
-            <li class="nav-item"><a href="#programs-section" class="nav-link" style="color: #ff8ba7;"><span>Terapi</span></a></li>
-            <li class="nav-item"><a href="#blog-section" class="nav-link" style="color: #ff8ba7;"><span>Artikel</span></a></li>
-            <li class="nav-item"><a href="#contact-section" class="nav-link" style="color: #ff8ba7;"><span>Kontak</span></a></li>
+            <li class="nav-item"><a href="#home-section" class="nav-link" style="color: #000000;"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#profil-section" class="nav-link" style="color: #000000;"><span>Profil</span></a></li>
+            <li class="nav-item"><a href="#programs-section" class="nav-link" style="color: #000000;"><span>Terapi</span></a></li>
+            <li class="nav-item"><a href="#blog-section" class="nav-link" style="color: #000000;"><span>Artikel</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link" style="color: #000000;"><span>Kontak</span></a></li>
             <!--<li class="nav-item"><a href="#gallery" class="nav-link" style="color: #00918e;"><span>Galeri</span></a></li>-->
-            <li class="nav-item"><a href="#go" class="nav-link" style="color: #ff8ba7;"><span>Gallery</span></a></li>
-            <li class="nav-item"><a href="#questions_page" class="nav-link" style="color: #ff8ba7;"><span>FAQ</span></a></li>
+            <li class="nav-item"><a href="#go" class="nav-link" style="color: #000000;"><span>Gallery</span></a></li>
+            <li class="nav-item"><a href="#questions_page" class="nav-link" style="color: #000000;"><span>FAQ</span></a></li>
             <a class="btn btn-primary px-4 py-3" href="{{ url('/log')}}">Login</a>
            </ul>
           </div>
         </div>
         </div>
       </nav>
-    </div>
 
-     <section id="home-section" class="hero">
-        <div class="home-slider js-fullheight owl-carousel">
-            <div class="slider-item js-fullheight">
-                <div class="overlay"></div>
-                <div class="container-fluid p-0">
-                <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                    <img src="{{ asset('img/4.jpg') }}" class="img-fluid" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container-fluid p-0">
-            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                <img src="{{ asset('img/banner1.jpg') }}" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item js-fullheight">
-          <div class="overlay"></div>
-          <div class="container-fluid p-0">
-            <div class="d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
-                <img src="{{ asset('img/banners.jpg') }}" class="img-fluid" alt="">
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!--
-    <section id="home-section ftco" class="hero">
+  <section id="home-section" class="hero">
       <div class="home-slider js-fullheight owl-carousel">
         <div class="slider-item js-fullheight">
-            <div class="overlay"></div>
-            <div class="container-fluid p-0">
-            <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="" style="background-image: url('img/4.jpg'); background-repeat: no-repeat; height: 100%; width: 100%;">
-              <div class="img js-fullheight">
-                <img src="{{ asset('img/4.jpg') }}" class="img-fluid" alt="">
-              </div><img src="{{ asset('img/4.jpg') }}" class="img-fluid" alt="">
-            </div>
-        </div>
-
-        <div class="slider-item js-fullheight">
           <div class="overlay"></div>
           <div class="container-fluid p-0">
-            <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="" style="background-image: url('img/banner1.jpg'); background-repeat: no-repeat; height: 100%; width: 100%;">
-              <div class="img js-fullheight">
-                <img src="{{ asset('img/banner1.jpg') }}" class="img-fluid" alt="">
+            <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+              <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/4.jpg);">
+                <div class="align-items-center container pl-xs-5 col-xs-12 text-center" style="margin-top: 410px; width: 100%;">
+                  <p><a href="#visimisi" class="btn btn-primary col-md-2 col-sm-2 col-xs-2">Get to know us deeper</a></p>
+                </div>
               </div>
             </div>
           </div>
@@ -139,31 +105,25 @@
         <div class="slider-item js-fullheight">
           <div class="overlay"></div>
           <div class="container-fluid p-0">
-            <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="" style="background-image: url('img/4.jpg'); background-repeat: no-repeat; height: 100%; width: 100%;">
-              <div class="img js-fullheight">
-                <img src="{{ asset('img/banners.jpg') }}" class="img-fluid" alt="">
-              </div>
-            </div>
-            <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-              <div class="text">
-                <span class="subheading">Berminat terapi di Klinik Liliput?</span>
-                <h1 class="mb-4 mt-3">Get A <span>Perfect</span> Body <span>Figure</span></h1>
-                <p><a class="btn btn-primary px-4 py-3" href="{{ url('/reg')}}">Register</a></p>
+            <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+              <div class="one-third order-md-last img js-fullheight" style="background-image:url(img/banner1.jpg);">
+                <div class="align-items-center container pl-xs-5 col-xs-12 text-center" style="margin-top: 410px; width: 100%;">
+                  <p><a href="{{url('/reg')}}" class="btn btn-primary col-md-2 col-sm-2 col-xs-2">Register</a></p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-		-->
+  </section>
 
-	<section class="ftco-section img ftco-services ftco-no-pt ftco-no-pb mt-5" style="background-image: url('img/head.jpg'); height: 100%; background-repeat: no-repeat;">
+	<section class="ftco-section img ftco-services ftco-no-pt ftco-no-pb mt-5" id="visimisi" style="background-image: url('img/head.jpg'); height: 100%; background-repeat: no-repeat;">
       <div class="container pb-1">
         <div class="col-md-12 text-center py-3">
             <h1>
                 VISI MISI
             </h1>
-            <h4 class="col-md-12 text-center py-3" style="color: #ff8ba7;">
+            <h4 class="col-md-12 text-center py-3" style="color: #000000;">
               Visi kami adalah "<b>Melayani Secara Madani</b>" dengan 3 Misi kami yaitu:<br>
             </h4>
         </div>
@@ -175,8 +135,8 @@
                 <!--<div class="icon"><span class="flaticon-number-1"></span></div>-->
                 <div class="icon"><img src="{{asset('img/icon/ide.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
-                  <h3 class="heading mb-3">Satu</h3>
-                  <p style="color: #ffffff;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
+                  <h3 class="heading mb-3" style="color: #000000;">Satu</h3>
+                  <p style="color: #000000;">Menjadi tempat terapi yang menjangkau semua lapisan masyarakat, tidak dibatasi status sosial ekonomi, ras, suku bangsa dan agama</p>
                   <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
                 </div>
               </div>      
@@ -186,8 +146,8 @@
                 <!--<div class="icon"><span class="flaticon-number-2"></span></div>-->
                 <div class="icon"><img src="{{asset('img/icon/fisio2.png')}}" style="height: 100px; width: 100px"></div>
                 <div class="media-body">
-                  <h3 class="heading mb-3">Dua</h3>
-                  <p style="color: #ffffff;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
+                  <h3 class="heading mb-3" style="color: #000000;">Dua</h3>
+                  <p style="color: #000000;">Menjadikan orangtua dan masyarakat sebagai mitra dengan memberikan edukasi sesuai kebutuhan anak</p>
                   <!-- <p><a href="#" class="btn btn-primary">Read more</a></p> -->
                 </div>
               </div>    
@@ -197,8 +157,8 @@
                 <div class="media-body">
                   <!--<div class="icon"><span class="flaticon-numbre-3"></span></div>-->
                   <div class="icon"><img src="{{asset('img/icon/edukasi.png')}}" style="height: 100px; width: 100px"></div>
-                  <h3 class="heading mb-3">Tiga</h3>
-                  <p style="color: #ffffff;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
+                  <h3 class="heading mb-3" style="color: #000000;">Tiga</h3>
+                  <p style="color: #000000;">Menyediakan tenaga profesional yang berkompeten dan dapat melayani individu secara utuh/holistik/madani</p>
                 </div>
               </div>      
             </div>
@@ -221,14 +181,14 @@
             <div class="py-md-0">
               <div class="row justify-content-start pb-3">
               <div class="col-md-12 text-left py-0">
-                <h1 style="color: #ff8ba7;">
+                <h1 style="color: #000000;">
                   Profil Klinik Liliput
                 </h1>
               </div>
               <div class="col-md-12 heading-section ftco-animate py-md-5">
-                  <p style="color: #ff8ba7; font-size: 19px;">Klinik Liliput adalah sebuah tempat terapi yang termasuk dalam bidang Kesehatan dan Pendidikan Nonformal bagi anak-anak yang mempunyai kebutuhan khusus seperti Autisme, Asperger’s Syndrom, Down Syndrom, Cerebral Palsy, Keterlambatan Perkembangan Psikomotor, Problem belajar/kesulitan belajar, dan lain – lain, yang terletak di Jl. Cipete, Cilandak, Jakarta Selatan.</p>
+                  <p style="color: #000000; font-size: 19px;">Klinik Liliput adalah sebuah tempat terapi yang termasuk dalam bidang Kesehatan dan Pendidikan Nonformal bagi anak-anak yang mempunyai kebutuhan khusus seperti Autisme, Asperger’s Syndrom, Down Syndrom, Cerebral Palsy, Keterlambatan Perkembangan Psikomotor, Problem belajar/kesulitan belajar, dan lain – lain, yang terletak di Jl. Cipete, Cilandak, Jakarta Selatan.</p>
                   <br>
-                  <h4 style="font-size: 19px; color: #ff8ba7">
+                  <h4 style="font-size: 19px; color: #000000">
                   Dan kurang lebih sudah ada <span class="number" data-number="300">0</span> anak telah menjadi pasien kami</h4>
               </div>
               </div>
@@ -241,27 +201,27 @@
   <section class="ftco-section ftco-no-pb ftco-no-pt ftco-program bg-light" id="programs-section">
       <div class="container">
         <div class="row no-gutters">
-          <div class="col-md-4 ftco-animate py-5 nav-link-wrap" style="height:585px !important">
+          <div class="col-md-4 ftco-animate py-3 nav-link-wrap" style="height:585px !important">
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link px-4 flaticon-adn-1 active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true"> Okupasi Terapi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-adn-1 active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true" style="font-size: 18px; color: #ffffff;"><strong> Okupasi Terapi</strong></a>
 
-              <a class="nav-link px-4 flaticon-clinic" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="true"> Sensori Integrasi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-clinic" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="true" style="font-size: 18px; color: #ffffff;"><strong> Sensori Integrasi</strong></a>
 
-              <a class="nav-link px-4 flaticon-adn-3" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false"> Fisio Terapi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-adn-3" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Fisio Terapi</strong></a>
 
-              <a class="nav-link px-4 flaticon-relationship" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false"> Terapi Wicara</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-relationship" id="v-pills-4-tab" data-toggle="pill" href="#v-pills-4" role="tab" aria-controls="v-pills-4" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Terapi Wicara</strong></a>
 
-              <a class="nav-link px-4 flaticon-adn-3" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false"> Snoezelen Terapi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-adn-3" id="v-pills-5-tab" data-toggle="pill" href="#v-pills-5" role="tab" aria-controls="v-pills-5" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Snoezelen Terapi</strong></a>
 
-              <a class="nav-link px-4 flaticon-rehabilitation-1" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false"> Akuatik Terapi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-rehabilitation-1" id="v-pills-6-tab" data-toggle="pill" href="#v-pills-6" role="tab" aria-controls="v-pills-6" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Akuatik Terapi</strong></a>
 
-              <a class="nav-link px-4 flaticon-clinic" id="v-pills-7-tab" data-toggle="pill" href="#v-pills-7" role="tab" aria-controls="v-pills-7" aria-selected="false"> Psikologi</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-clinic" id="v-pills-7-tab" data-toggle="pill" href="#v-pills-7" role="tab" aria-controls="v-pills-7" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Psikologi</strong></a>
 
-              <a class="nav-link px-4 flaticon-spiral" id="v-pills-8-tab" data-toggle="pill" href="#v-pills-8" role="tab" aria-controls="v-pills-8" aria-selected="false"> Terapi Edukasi (OT)</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-spiral" id="v-pills-8-tab" data-toggle="pill" href="#v-pills-8" role="tab" aria-controls="v-pills-8" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Terapi Edukasi (OP)</strong></a>
 
-            	<a class="nav-link px-4 flaticon-aroma" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-9" aria-selected="false"> Baby Massage</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-aroma" id="v-pills-9-tab" data-toggle="pill" href="#v-pills-9" role="tab" aria-controls="v-pills-9" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Baby Massage</strong></a>
 
-              <a class="nav-link px-4 flaticon-trophy" id="v-pills-10-tab" data-toggle="pill" href="#v-pills-10" role="tab" aria-controls="v-pills-10" aria-selected="false"> Play Therapy</a>
+              <a class="nav-link px-4 py-2 mt-2 flaticon-trophy" id="v-pills-10-tab" data-toggle="pill" href="#v-pills-10" role="tab" aria-controls="v-pills-10" aria-selected="false" style="font-size: 18px; color: #ffffff;"><strong> Play Therapy</strong></a>
             </div>
           </div>
 
@@ -365,7 +325,7 @@
                 <br>
                 <span class="icon mb-3 mt-5 d-block Flaticon-trophy"></span>
                 <h2 class="mt-5 mb-4">Play Therapy</h2>
-                <p>Pelayanan terapi dengan memberikan stimulasi lewat pijatan untuk membantu meningkatkan proses tumbuh kembang pada bayi</p>
+                <p>Play Therapy merupakan metode terapi yang menggunakan pendekatan bermain sebagai bentuk terapi untuk menolong anak dari permasalahan psikologis dan perilaku yang dialaminya.</p>
                 <br>
               </div>
             </div>
@@ -720,7 +680,7 @@
             <div class="row">
                 <div class="col-md-12 pt-4">
                     <div class="toggole-boxs panel-group" id="accordion" >             
-                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="color: #ff8ba7;"><strong>Apakah bisa mendaftar lebih dari satu jenis terapi?</strong></div>
+                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1" style="color: #000000;"><strong>Apakah bisa mendaftar lebih dari satu jenis terapi?</strong></div>
                           <div id="collapse1" class="panel-collapse collapse in">
                               Bisa. Calon pasien bisa mendaftarkan lebih dari satu jenis terapi
                           </div>
@@ -730,7 +690,7 @@
                 <br>
                 <div class="col-md-12 pt-4">
                     <div class="toggole-boxs panel-group" id="accordion" >             
-                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="color: #ff8ba7;"><strong>Untuk apakah link download kuesioner di setiap jenis terapi?</strong></div>
+                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse2" style="color: #000000;"><strong>Untuk apakah link download kuesioner di setiap jenis terapi?</strong></div>
                           <div id="collapse2" class="panel-collapse collapse in">
                               Link download kuesioner yang disediakan disetiap jenis terapi diperuntukan untuk pendaftar yang telah mencapai tahap pemanggilan assessment sebagai bahan Assesor untuk melakukan assessment. Pendaftar diharapkan mendownload Kuesioner terapi yang ditujukan, kemudian diisi, dan dibawa saat datang ke Klinik untuk melakukan assessment.
                           </div>
@@ -740,7 +700,7 @@
                 <br>
                 <div class="col-md-12 pt-4">
                     <div class="toggole-boxs panel-group" id="accordion" >
-                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="color: #ff8ba7;"><strong>Bagaimanakah cara mendaftar pasien melalui website ini?</strong></div>
+                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse3" style="color: #000000;"><strong>Bagaimanakah cara mendaftar pasien melalui website ini?</strong></div>
                           <div id="collapse3" class="panel-collapse collapse in">
                               Calon pasien menekan tombol "Register" lalu mengisi form register yang tersedia. Kemudian, Calon pasien dipersilahkan untuk "Login" dan mengisi kuesioner umum yang telah disediakan. Setelah selesai, pihak Klinik, akan menghubungi pendaftar via telefon atau email untuk melakukan assessment.
                           </div>
@@ -750,7 +710,7 @@
                 <br>
                 <div class="col-md-12 pt-4">
                     <div class="toggole-boxs panel-group" id="accordion" >
-                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="color: #ff8ba7;"><strong>Apakah ada kontak untuk memberikan saran?</strong></div>
+                          <div class="panel-heading panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse4" style="color: #000000;"><strong>Apakah ada kontak untuk memberikan saran?</strong></div>
                           <div id="collapse4" class="panel-collapse collapse out">
                               Tentu ada, silahkan berikan kritik dan saran anda kepada kami melalui e-mail: admin@klinikliliput.com
                           </div>
@@ -809,16 +769,16 @@
       </div>
     </footer> 
 
-    <!--<div class="footer-bottom" style="background: linear-gradient(45deg, #1de099, #1dc8cd);"> linear-gradient(45deg, #ff8ba7, #ffc6c7);-->
-      <div class="footer-bottom" style="background: linear-gradient(45deg, #ff8ba7, #fedab8);">
+    <!--<div class="footer-bottom" style="background: linear-gradient(45deg, #1de099, #1dc8cd);"> pink #fe9191; linear-gradient(45deg, #000000, #ffc6c7);-->
+    <div class="footer-bottom" style="background: linear-gradient(45deg, #f6c89f, #fbe3b9);">
       <div class="container" >
         <div class="row">
           <div class="col-md-12 text-center pt-3">
-            <p style="color: white;">SimplyDev - Copyright &copy;2019 Allright Reserved. Colorlib.</p>
+            <p style="color: #000000;">SimplyDev - Copyright &copy;2019 Allright Reserved. Colorlib.</p>
           </div>
         </div>
       </div>
-    </div>
+    </div> 
 
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>

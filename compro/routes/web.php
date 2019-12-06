@@ -42,6 +42,7 @@ Route::post('/assesnew', 'CompanyProfile@assesnew');
 //kuesioner
 Route::get('/pass', 'CompanyProfile@Umum');
 Route::resource('/umum','kuesiumum');
+
 //req download kuesioner
 Route::post('/reqdownload', 'CompanyProfile@reqdownload');
 

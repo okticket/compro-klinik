@@ -21,22 +21,24 @@
                   <div class="col-md-12 text-center">
                     <img class="img-fluid" src="{{ asset('images/logo liliput.png')}}" style="height: 50px; width: 100px">
                   </div>
-                    <label class="col-md-12 text-center"><h3>Verifikasi email</h3><hr></label>
+                    <label class="col-md-12 text-center"><h3>File Kuesioner Terapi Klinik Liliput</h3><hr></label>
                 </div>
               </div> 
 
               <div class="row">
-                <div class="form-group" style="padding-left: 100px">
-                  <div class="col-md-12 text-center">
-                    <label class="control-label">Untuk verifikasi email anda, silahkan klik link dibawah ini</label>
-                  </div>
-                  <div class="col-md-12 text-center">
-                    <p><a href="{{url('http://localhost:8000/konfirm/'.$id_pasien)}}">LINK VERIFICATION</a></p>
-                  </div>
-                  <div class="col-md-12 text-center">
-                    <label class="control-label">Best Regards, Admin Klinik liliput</label>
-                  </div>
-                </div>
+                <form class="form-horizontal">
+                  @csrf
+                    <div class="form-group" style="padding-left: 100px">
+                      <div class="col-md-12 text-center" style="padding-left: 140px">
+                        <label class="control-label">Dear, Orang tua calon pasien</label><br>
+                        <label class="control-label">Berikut adalah file kuesioner yang telah Anda pilih sebelumnya, silahkan di unduh, kemudian di isi.</label>
+                        <label class="control-label">Selanjutnya, mohon kuesioner yang telah Anda isi, dibawa ke klinik, ketika Anda mendapat konfirmasi telefon untuk melakukan assessment terapi.</label>
+                        <label class="control-label">Terimakasih.</label><br>
+                        <label class="control-label">Best Regards,</label><br>
+                        <label class="control-label">Admin Klinik Liliput</label><br>
+                      </div>
+                    </div>
+                </form>
               </div>
 
             </div>
