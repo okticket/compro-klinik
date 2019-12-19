@@ -461,7 +461,7 @@
   </section>
 
   <section id="go" class="carousel slide gallery ftco-section img ftco-no-pt" data-ride="carousel" style="background-image: url('img/head.jpg'); height: 100%; background-size: cover; background-repeat: no-repeat;">
-      <div class="container py-0">
+      <div class="container pr-3">
         <br>
         <br>
           <div class="col-md-12 heading-section text-center ftco-animate">
@@ -472,214 +472,331 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g1.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g1.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g2.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g2.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g3.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g3.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g4.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g4.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g1.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g1.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g5.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g5.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g6.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g6.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g7.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g7.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g8.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g8.jpg);">
-                  </a>
-                </div>
-              </div>
-            </div>
-
-                        <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g9.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g10.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h1.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g11.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h2.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g12.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h3.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g13.jpg);">
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g9.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g14.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h1.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g15.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h2.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g16.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h3.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g17.jpg);">
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/g9.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/g9.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h1.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h1.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h2.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h2.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h3.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h3.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g2.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g2.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h4.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h4.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g3.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g3.jpg); height: 400px">
                   </a>
                 </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h5.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h5.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h6.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h6.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h7.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h7.jpg);">
+               </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g4.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g4.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h8.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h8.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h9.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h9.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h10.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h10.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h11.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h11.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g5.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g5.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h12.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h12.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h13.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h13.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h14.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h14.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h15.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h15.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g6.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g6.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h16.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h16.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h17.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h17.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h18.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h18.jpg);">
-                  </a>
-                </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h19.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h19.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g7.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g7.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
               <div class="row">
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h20.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h20.jpg);">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g8.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g8.jpg); height: 400px">
                   </a>
                 </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h21.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h21.jpg);">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g9.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g10.jpg); height: 400px">
                   </a>
                 </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h22.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h22.jpg);">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h1.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g11.jpg); height: 400px">
                   </a>
                 </div>
-                <div class="col-md-3 ftco-animate">
-                  <a href="images/h23.jpg" class="gallery image-popup img d-flex align-items-center d-block w-100" style="background-image: url(images/h23.jpg);">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h2.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g12.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h3.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g13.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g9.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g14.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h1.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g15.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h2.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g16.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h3.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g17.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/g9.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/g9.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h1.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h1.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h2.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h2.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h3.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h3.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h4.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h4.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h5.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h5.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h6.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h6.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h7.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h7.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h8.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h8.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h9.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h9.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h10.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h10.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h11.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h11.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h12.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h12.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h13.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h13.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h14.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h14.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h15.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h15.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h16.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h16.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h17.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h17.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h18.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h18.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h19.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h19.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h20.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h20.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h21.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h21.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h22.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h22.jpg); height: 400px">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-8 offset-2 mr-5 ftco-animate">
+                  <a href="images/h23.jpg" class="gallery image-popup img d-flex" style="background-image: url(images/h23.jpg); height: 400px">
                   </a>
                 </div>
               </div>
             </div>
           </div>
           <a class="carousel-control-prev" href="#go" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black"></span>
+            <span class="carousel-control-prev-icon" aria-hidden="false" style="background-color: black"></span>
             <span class="sr-only">Prev</span>
           </a>
           <a class="carousel-control-next" href="#go" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black"></span>
+            <span class="carousel-control-next-icon" aria-hidden="false" style="background-color: black"></span>
             <span class="sr-only">Next</span>
           </a>
           <br>
