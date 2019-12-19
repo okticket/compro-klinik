@@ -36,6 +36,15 @@
     <link src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
 
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.js"></script>
+
+    <link src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"></script>
+
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
   
@@ -44,7 +53,7 @@
         $('.input-tanggal').datepicker();   
       });
     </script>
-  
+     
   </head>
   
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -87,6 +96,7 @@
         </div>
       </nav>
 
+<div id="fullpage">
   <section id="home-section" class="hero text-center">
       <div class="home-slider js-fullheight owl-carousel">
         <div class="slider-item js-fullheight">
@@ -123,6 +133,7 @@
 
       </div>
   </section>
+</div>
 
 	<section class="ftco-section img ftco-services ftco-no-pt ftco-no-pb mt-5" id="visimisi" style="background-image: url('img/head.jpg'); height: 100%; background-repeat: no-repeat;">
       <div class="container pb-1">
@@ -950,6 +961,13 @@
     $('.carousel').carousel({
       interval: 2000
     })
+    </script>
+
+    <script type="text/javascript">
+        fullpage('#fullpage', {
+          autoScrolling:true;
+          scrollHorizontally: true;
+        });
     </script>
   </body>
 </html>
