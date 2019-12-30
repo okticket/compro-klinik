@@ -959,7 +959,32 @@
 
     <script type="text/javascript">
     $('.carousel').carousel({
-      interval: 2000
+        interval: 2000,
+        loop: false,
+        margin: 15,
+        nav: true,
+        mouseDrag: true,
+        touchDrag: true,
+        navContainer: 'controls-class',
+        dots: false,
+        navText: ['', ''],
+        responsive: {
+          0: {
+            items: 1,
+            autoHeight: true,
+            mouseDrag: true,
+            touchDrag: true
+          },
+          600: {
+            items: 1,
+            autoHeight: true,
+            mouseDrag: true,
+            touchDrag: true
+          },
+          1050: {
+            items: 3,
+            autoWidth: true
+          }
     })
     </script>
 
@@ -969,5 +994,6 @@
           scrollHorizontally: true;
         });
     </script>
+
   </body>
 </html>
