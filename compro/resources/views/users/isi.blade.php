@@ -1,3 +1,6 @@
+@if (!Session::has('id_pasien'))
+  <script>window.location = "{{url('/logout')}}";</script>
+@endif
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -87,7 +90,7 @@
             <!--<li class="nav-item"><a href="#gallery" class="nav-link" style="color: #00918e;"><span>Galeri</span></a></li>-->
             <li class="nav-item"><a href="#go" class="nav-link" style="color: #000000;" data-toggle="collapse" data-target=".navbar-collapse.show"><span>Gallery</span></a></li>
             <li class="nav-item"><a href="#questions_page" class="nav-link" style="color: #000000;" data-toggle="collapse" data-target=".navbar-collapse.show"><span>FAQ</span></a></li>
-            <a class="btn btn-primary px-4 py-3" href="{{ url('/log')}}">Login</a>
+            <a class="btn btn-primary px-4 py-3" href="{{ url('/logout')}}">Logout</a>
            </ul>
           </div>
         </div>

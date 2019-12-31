@@ -15,7 +15,7 @@
               <?php
                 $angka=range(0,9);
                 shuffle($angka);
-                $id=array_rand($angka,2);
+                $id=array_rand($angka,3);
                 $idstring=implode($id);
                 $id_asses=$idstring;
 
@@ -23,10 +23,10 @@
                 $dataakhir = \App\m_daftarpasien::max('id_pasien');
                 $no = $dataakhir;
                 $lama = substr($no, 0, 6);
-                $rplc = str_replace($lama, $now, $no);
-                $id_pasien=$rplc.$id_asses;
+                $rplc = str_replace($lama, $now, $id_asses);
+                $idnew = $now.$rplc;
               ?>
-              <input type="text" class="form-control col-md-6 text-left" name="id_pasien" value="{{$id_pasien}}" hidden>
+              <input type="text" class="form-control col-md-6 text-left" name="id_pasien" value="{{$idnew}}" hidden="">
 
 
               <div class="row">

@@ -1,3 +1,6 @@
+@if (!Session::has('id_pasien'))
+  <script>window.location = "{{url('/logout')}}";</script>
+@endif
 <!DOCTYPE html>
 <html>
 <head>

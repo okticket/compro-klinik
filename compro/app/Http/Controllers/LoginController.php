@@ -47,8 +47,7 @@ class LoginController extends Controller
     }
 
     public function logout(){
-        Auth::logout();
-        Session::unset();
+        Session::flush();
         return redirect('/')->with('alert-success','Kamu sudah logout');
     }
 }
