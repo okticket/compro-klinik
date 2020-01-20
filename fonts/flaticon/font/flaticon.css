@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 15/08/2019 03:26
+  	Creation date: 25/07/2019 12:04
   	*/
 
 @font-face {
@@ -22,26 +22,18 @@
   }
 }
 
-[class^="Flaticon-"]:before, [class*=" Flaticon-"]:before,
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 100px;
+        font-size: 20px;
 font-style: normal;
 margin-left: 20px;
 }
 
-.Flaticon-number-1:before { content: "\f100"; }
-.Flaticon-number-2:before { content: "\f101"; }
-.Flaticon-numbre-3:before { content: "\f102"; }
-.Flaticon-adn-1:before { content: "\f103"; }
-.Flaticon-adn-3:before { content: "\f104"; }
-.Flaticon-spiral:before { content: "\f105"; }
-.Flaticon-rehabilitation-1:before { content: "\f106"; }
-.Flaticon-counseling:before { content: "\f107"; }
-.Flaticon-aroma:before { content: "\f108"; }
-.Flaticon-cupping:before { content: "\f109"; }
-.Flaticon-relationship:before { content: "\f10a"; }
-.Flaticon-clinic:before { content: "\f10b"; }
-.Flaticon-trophy:before { content: "\f10c"; }
-.Flaticon-countdown:before { content: "\f10d"; }
-.Flaticon-three:before { content: "\f10e"; }
+.flaticon-piggy-bank:before { content: "\f100"; }
+.flaticon-wallet:before { content: "\f101"; }
+.flaticon-file:before { content: "\f102"; }
+.flaticon-locked:before { content: "\f103"; }
+.flaticon-bed:before { content: "\f104"; }
+.flaticon-bathtub:before { content: "\f105"; }
+.flaticon-floor-plan:before { content: "\f106"; }
